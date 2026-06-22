@@ -61,8 +61,8 @@ ai-telegram-bot/
 ├── .gitignore          # Игнорируемые файлы  
 ├── README.md           # Это описание  
 └── screenshots/        # Папка со скриншотами  
-    ├── demo1.png  
-    └── demo2.png  
+        ├── demo1.png  
+        └── demo2.png  
 
 ## 🔧 Конфигурация
 
