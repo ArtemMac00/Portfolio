@@ -36,8 +36,8 @@ cd ai-telegram-bot
 pip install -r requirements.txt
 
 ### 3. Создай файл .env
-Скопируй .env.example и заполни своими токенами: \
-TELEGRAM_TOKEN=1234567890:ABCdefGHIjklMNOpqrsTUVwxyz \
+Скопируй .env.example и заполни своими токенами:   
+TELEGRAM_TOKEN=1234567890:ABCdefGHIjklMNOpqrsTUVwxyz   
 AGNES_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \
 MODEL=agnes-2.0-flash
 
