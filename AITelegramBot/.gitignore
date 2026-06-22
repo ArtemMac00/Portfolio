@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Виртуальное окружение
+venv/
+env/
+.venv/
+
+# Переменные окружения (секреты)
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Файлы логов
+*.log
