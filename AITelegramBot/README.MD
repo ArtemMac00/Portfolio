@@ -60,9 +60,7 @@ ai-telegram-bot/
 ├── .env.example        # Пример .env файла  
 ├── .gitignore          # Игнорируемые файлы  
 ├── README.md           # Это описание  
-└── screenshots/        # Папка со скриншотами  
-        ├── demo1.png  
-        └── demo2.png  
+└── screenshots        # Папка со скриншотами  
 
 ## 🔧 Конфигурация
 
