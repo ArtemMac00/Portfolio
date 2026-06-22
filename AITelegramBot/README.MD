@@ -51,13 +51,6 @@ MODEL=agnes-2.0-flash
 /stats	Показать статистику использования
 /help	Помощь и список команд
 
-## 📸 Скриншоты
-
-Добавь свои скриншоты в папку screenshots/
-
-https://screenshots/demo1.png
-https://screenshots/demo2.png
-
 ## 📁 Структура проекта
 
 text
