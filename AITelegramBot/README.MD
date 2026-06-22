@@ -38,42 +38,41 @@ pip install -r requirements.txt
 ### 3. Создай файл .env
 Скопируй .env.example и заполни своими токенами:   
 TELEGRAM_TOKEN=1234567890:ABCdefGHIjklMNOpqrsTUVwxyz   
-AGNES_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \
+AGNES_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx   
 MODEL=agnes-2.0-flash
 
 ### 4. Запусти бота
 
 ## 🎯 Команды бота
 
-Команда	Описание
-/start	Главное меню с приветствием
-/reset	Очистить историю диалога
-/stats	Показать статистику использования
-/help	Помощь и список команд
+Команда	Описание   
+/start	Главное меню с приветствием   
+/reset	Очистить историю диалога   
+/stats	Показать статистику использования   
+/help	Помощь и список команд   
 
 ## 📁 Структура проекта
 
-text
-ai-telegram-bot/
-├── bot.py              # Основной код бота
-├── config.py           # Конфигурация (токены, модель)
-├── requirements.txt    # Зависимости
-├── .env.example        # Пример .env файла
-├── .gitignore          # Игнорируемые файлы
-├── README.md           # Это описание
-└── screenshots/        # Папка со скриншотами
-    ├── demo1.png
-    └── demo2.png
+ai-telegram-bot/   
+├── bot.py              # Основной код бота   
+├── config.py           # Конфигурация (токены, модель)   
+├── requirements.txt    # Зависимости  
+├── .env.example        # Пример .env файла  
+├── .gitignore          # Игнорируемые файлы  
+├── README.md           # Это описание  
+└── screenshots/        # Папка со скриншотами  
+    ├── demo1.png  
+    └── demo2.png  
 
 ## 🔧 Конфигурация
 
 Все настройки хранятся в config.py:
 
-Параметр	Значение	Описание
-MAX_HISTORY_LENGTH	10	Количество пар вопрос-ответ в памяти
-MAX_TOKENS	500	Максимальная длина ответа
-TEMPERATURE	0.7	Креативность ответов (0.0 — строго, 1.0 — творчески)
-SYSTEM_PROMPT	Текст роли	Что бот говорит о себе
+Параметр	Значение	Описание  
+MAX_HISTORY_LENGTH	10	Количество пар вопрос-ответ в памяти  
+MAX_TOKENS	500	Максимальная длина ответа  
+TEMPERATURE	0.7	Креативность ответов (0.0 — строго, 1.0 — творчески)  
+SYSTEM_PROMPT	Текст роли	Что бот говорит о себе  
 
 ## 📊 Лимиты Agnes AI
 
