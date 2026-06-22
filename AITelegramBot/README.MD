@@ -29,16 +29,16 @@
 ## 🚀 Установка и запуск
 
 ### 1. Клонируй репозиторий
-git clone https://github.com/твой-ник/ai-telegram-bot.git
+git clone https://github.com/ArtemMac00/ai-telegram-bot.git
 cd ai-telegram-bot
 
 ### 2. Установи зависимости
 pip install -r requirements.txt
 
 ### 3. Создай файл .env
-Скопируй .env.example и заполни своими токенами:
-TELEGRAM_TOKEN=1234567890:ABCdefGHIjklMNOpqrsTUVwxyz
-AGNES_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Скопируй .env.example и заполни своими токенами: \
+TELEGRAM_TOKEN=1234567890:ABCdefGHIjklMNOpqrsTUVwxyz \
+AGNES_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \
 MODEL=agnes-2.0-flash
 
 ### 4. Запусти бота
