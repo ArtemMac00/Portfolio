@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Reviewer 2.0</title>
+    
+    <!-- Подсветка синтаксиса -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/csharp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Шапка -->
+        <header>
+            <div class="header-left">
+                <h1>🤖 Code Reviewer</h1>
+                <span class="badge">v1.0</span>
+            </div>
+            <div class="header-right">
+                <button onclick="clearAll()" class="btn btn-secondary">🗑️ Очистить всё</button>
+                <button onclick="toggleHistory()" class="btn btn-secondary" id="historyToggle">📜 История</button>
+            </div>
+        </header>
+
+        <!-- Основной блок -->
+        <div class="main">
+            <!-- Ввод кода -->
+            <div class="input-section">
+                <div class="toolbar">
+                    <select id="language" class="select-language">
+                        <option value="python">🐍 Python</option>
+                        <option value="csharp">#️⃣ C#</option>
+                        <option value="javascript">⬡ JavaScript</option>
+                        <option value="java">☕ Java</option>
+                    </select>
+                    <button onclick="analyzeCode()" class="btn btn-primary" id="analyzeBtn">
+                        🔍 Анализировать
+                    </button>
+                    <button onclick="clearCode()" class="btn btn-secondary">🗑️ Очистить</button>
+                    <label class="btn btn-secondary file-upload">
+                        📂 Файл
+                        <input type="file" id="fileInput" accept=".py,.cs,.js,.java,.txt" onchange="loadFile(event)">
+                    </label>
+                </div>
+                
+                <div class="drop-zone" id="dropZone">
+                    <textarea id="codeInput" placeholder="Вставьте код сюда или перетащите файл..."></textarea>
+                    <div class="drop-overlay" id="dropOverlay">📂 Перетащите файл сюда</div>
+                </div>
+            </div>
+
+            <!-- Результат -->
+            <div class="output-section">
+                <div class="result-header">
+                    <div class="result-left">
+                        <span id="resultScore" class="score">Оценка: —</span>
+                        <span id="resultStatus" class="status">Ожидание</span>
+                    </div>
+                    <div class="result-right">
+                        <span id="resultTime" class="time"></span>
+                        <button onclick="copyResult()" class="btn-icon" title="Копировать результат">📋</button>
+                    </div>
+                </div>
+
+                <div class="result-content" id="resultContent">
+                    <div class="empty-state">
+                        <div class="empty-icon">🧠</div>
+                        <p>Вставьте код и нажмите «Анализировать»</p>
+                        <small>ИИ найдёт ошибки и предложит оптимизации</small>
+                    </div>
+                </div>
+
+                <!-- Прогресс-бар -->
+                <div class="progress-container" id="progressContainer" style="display:none;">
+                    <div class="progress-bar" id="progressBar"></div>
+                    <span class="progress-text" id="progressText">Анализ...</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- История -->
+        <div class="history-section" id="historySection" style="display:none;">
+            <h2>📜 История анализов</h2>
+            <div id="historyList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
