@@ -1,4 +1,4 @@
-# AI Code Reviewer 2.0
+# AI Code Reviewer 1.0
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green.svg)
