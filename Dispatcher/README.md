@@ -257,6 +257,5 @@ MIT License. Свободное использование, модификаци
 
 ## Контакты
 
-
-
----
+· GitHub: github.com/ArtemMac00  
+· Telegram: @artemii4ik
