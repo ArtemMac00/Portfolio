@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskManager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>📋 TaskManager</h1>
+            </div>
+        </header>
+
+        <div id="appContent">
+            <div class="stats-grid" id="statsGrid">
+                <div class="stat-card"><span class="stat-value" id="totalTasks">0</span><span class="stat-label">Всего</span></div>
+                <div class="stat-card in-progress"><span class="stat-value" id="inProgressTasks">0</span><span class="stat-label">В работе</span></div>
+                <div class="stat-card done"><span class="stat-value" id="doneTasks">0</span><span class="stat-label">Выполнено</span></div>
+                <div class="stat-card overdue"><span class="stat-value" id="overdueTasks">0</span><span class="stat-label">Просрочено</span></div>
+                <div class="stat-card avg"><span class="stat-value" id="avgTime">0</span><span class="stat-label">Ср. дней на задачу</span></div>
+            </div>
+
+            <div class="charts-row">
+                <div class="chart-box">
+                    <h3>Распределение по приоритетам</h3>
+                    <canvas id="priorityChart"></canvas>
+                </div>
+                <div class="chart-box">
+                    <h3>Активность за неделю</h3>
+                    <canvas id="timelineChart"></canvas>
+                </div>
+            </div>
+
+            <div class="task-controls">
+                <div class="input-group">
+                    <input type="text" id="taskTitle" placeholder="Название задачи">
+                    <input type="text" id="taskDesc" placeholder="Описание">
+                    <select id="taskPriority">
+                        <option value="">🤖 AI определит</option>
+                        <option value="High">🔴 High</option>
+                        <option value="Medium">🟡 Medium</option>
+                        <option value="Low">🟢 Low</option>
+                    </select>
+                    <button onclick="addTask()" class="btn btn-primary">➕ Добавить</button>
+                </div>
+                <div class="filter-group">
+                    <button onclick="loadTasks('all')" class="btn btn-secondary">Все</button>
+                    <button onclick="loadTasks('InProgress')" class="btn btn-secondary">🟡 В работе</button>
+                    <button onclick="loadTasks('Done')" class="btn btn-secondary">✅ Выполнено</button>
+                    <button onclick="loadTasks('Archived')" class="btn btn-secondary">📦 Архив</button>
+                    <input type="text" id="searchInput" placeholder="🔍 Поиск..." oninput="searchTasks()">
+                </div>
+            </div>
+
+            <div class="task-list" id="taskList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
